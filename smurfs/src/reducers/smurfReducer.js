@@ -1,7 +1,8 @@
 import {
     FETCH_SMURF_DATA_START,
     FETCH_SMURF_DATA_SUCCESS,
-    FETCH_SMURF_DATA_FAILURE
+    FETCH_SMURF_DATA_FAILURE,
+    DELETE_SMURF
   } from '../actions';
   
   const initialState = {
@@ -25,8 +26,14 @@ import {
           smurfs: action.payload,
           error: ''
         };
+        case DELETE_SMURF:
+            return {
+              ...state,
+              smurfs: state.smurfs.filter(smurf => smurf.id !== action.payload.id)
+            };
       default:
         return state;
     }
   };
+
   
