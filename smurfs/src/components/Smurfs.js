@@ -9,12 +9,11 @@ import Smurf from './Smurf';
 const Smurfs = props => { 
   return (
     <>
-      <h1>Smurf List!</h1>
       <button onClick={props.getData}>
         {props.isLoading ? (
           <Loader type="tailspin" color="#00BFFF" height="15" width="100" />
         ) : (
-          'Get Smurf Data'
+          'Load the Smurf Village'
         )}
       </button>
       {props.smurfs &&

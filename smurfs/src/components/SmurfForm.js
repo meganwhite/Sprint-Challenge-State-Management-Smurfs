@@ -4,7 +4,7 @@ import { Form, Field, withFormik } from 'formik';
 import * as Yup from 'yup';
 
 
-const SmurfForm = ({ errors, touched, values, handleSubmit, status }) => {
+const SmurfForm = ({ errors, touched, status }) => {
     const [smurfs, setSmurfs] = useState([]);
   
     useEffect(() => {
@@ -15,7 +15,7 @@ const SmurfForm = ({ errors, touched, values, handleSubmit, status }) => {
   
     return (
             <div className="smurf-form">
-                        <h1>Add a Smurf</h1>
+                        <h3>Add a Smurf</h3>
                         <Form>
                         <Field type="text" name="name" placeholder="Name" />
                         {touched.name && errors.name && (
