@@ -8,17 +8,19 @@ import Smurf from './Smurf';
 
 const Smurfs = props => { 
   return (
-    <>
-      <button onClick={props.getData}>
+    <div className='smurf-list'>
+        <button onClick={props.getData}>
         {props.isLoading ? (
           <Loader type="tailspin" color="#00BFFF" height="15" width="100" />
         ) : (
           'Load the Smurf Village'
         )}
-      </button>
-      {props.smurfs &&
-        props.smurfs.map(smurf => <Smurf key={smurf.id} smurf={smurf} />)}
-    </>
+        </button>
+        <div className='smurf-cards'>
+            {props.smurfs &&
+            props.smurfs.map(smurf => <Smurf key={smurf.id} smurf={smurf} />)}
+        </div> 
+    </div>
   );
 };
 

@@ -7,7 +7,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Welcome to the Smurf Village!</h1>
+        <div className='header'>
+          <h1>Welcome to the Smurf Village!</h1>
+        </div>
         <Smurfs />
         <FormikUserForm />
       </div>
